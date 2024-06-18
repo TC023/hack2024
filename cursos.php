@@ -10,7 +10,7 @@
 <body>
 
 <div class="sidebar">
-    <img src="img/logologo.svg" alt="Logo principal">
+    <img src="img/logos.svg" alt="Logo principal">
     <a href="index.html">Inicio</a>
     <a href="perfil.html">Mi perfil</a>
     <a href="ajustes.html">Ajustes</a>
@@ -67,8 +67,20 @@
         </div><!--anuncio-->
 
     </div> <!--.contenedor-anuncios-->
-    
+    <button id="chatbot-toggle-btn"><img src="img/bot.svg" alt="buttonpng" /></button>
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chat-header">
+            <span>Chatbot | Aprende sin limites</span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe un mensaje">
+            <button id="send-btn">Enviar</button>
+        </div>
+        
+    </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
