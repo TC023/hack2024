@@ -11,7 +11,7 @@
 
 <div class="sidebar">
     <img src="img/logologo.svg" alt="Logo principal">
-    <a href="index.html">Inicio</a>
+    <a href="index.php">Inicio</a>
     <a href="perfil.html">Mi perfil</a>
     <a href="ajustes.html">Ajustes</a>
 </div>
@@ -20,14 +20,25 @@
 
     <h2>Cursos disponibles</h2>
     <div class="contenedor-anuncios">
+        <?php
+        require "database.php";
+        $userid = $_GET["id"];
+        $sql = "SELECT * FROM inscriptions
+        INNER JOIN courses
+        ON inscriptions.course_id = courses.course_id
+        WHERE user_id = ".$userid."";
+        $pdo = Database::connect();
+        $sqltorn = "SELECT * FROM reto_torneo;";
+        foreach ($pdo->query($sql) as $row) {
+        echo '
         <div class="anuncio">
             <picture>
-                <img src="img/matematicas.svg" alt="Logo principal">
+                <img src="img/'.$row["img"].'" alt="Logo principal">
             </picture>
 
             <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Matemáticas</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
+                <h3 class="titulo-curso">'.$row["title"].'</h3>
+                <p class="precio">'.$row["instructor"].'</p>
 
 
                 <a href="anuncio.html" class="boton-amarillo-block">
@@ -35,37 +46,9 @@
                 </a>
             </div><!--.contenido-anuncio-->
         </div><!--anuncio-->
-
-        <div class="anuncio">
-            <picture>
-                <img src="img/ciencias.svg" alt="Logo principal">
-            </picture>
-
-            <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Ciencias</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
-
-
-                <a href="anuncio.html" class="boton-amarillo-block">
-                    Ver Propiedad
-                </a>
-            </div><!--.contenido-anuncio-->
-        </div><!--anuncio-->
-
-        <div class="anuncio">
-            <picture>
-                <img src="img/espanol.svg" alt="Logo principal">
-            </picture>
-            <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Español</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
-
-                <a href="anuncio.html" class="boton--negro">
-                    Ver Propiedad
-                </a>
-            </div><!--.contenido-anuncio-->
-        </div><!--anuncio-->
-
+        ';
+        }
+        ?>
     </div> <!--.contenedor-anuncios-->
     
 </div>
