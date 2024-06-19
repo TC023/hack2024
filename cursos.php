@@ -9,15 +9,16 @@
 </head>
 <body>
 
+
 <div class="sidebar">
-    <img src="img/logologo.svg" alt="Logo principal">
-    <a href="index.php">Inicio</a>
-    <a href="perfil.html">Mi perfil</a>
+    <img src="img/logos.svg" alt="Logo principal">
+    <a href="index.php">Cerrar sesión</a>
+    <a href="cursos.php">Cursos</a>
+    <a href="perfil.php?id=<?php echo $_GET["id"];?>">Mi perfil</a>
     <a href="ajustes.html">Ajustes</a>
 </div>
 
 <div class="content">
-
     <h2>Cursos disponibles</h2>
     <div class="contenedor-anuncios">
         <?php
@@ -66,12 +67,6 @@
 </head>
 <body>
 
-<div class="sidebar">
-    <img src="img/logos.svg" alt="Logo principal">
-    <a href="index.html">Inicio</a>
-    <a href="perfil.html">Mi perfil</a>
-    <a href="ajustes.html">Ajustes</a>
-</div>
     <button id="chatbot-toggle-btn"><img src="img/bot.svg" alt="buttonpng" /></button>
     <div class="chatbot-popup" id="chatbot-popup">
         <div class="chat-header">
