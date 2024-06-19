@@ -145,6 +145,14 @@ img,picture{
     border-radius: 3rem;
     
 }
+.tarea3{
+    display:grid;
+    gap:2rem;
+    grid-template-columns:2fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
 .tarea{
     background-color: var(--negro-principal);
     border:1px solid #c8c8c8;

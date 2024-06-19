@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,119 +6,13 @@
     <title>Barra de Navegación Lateral</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            width: 50px;
+        .single-digit-input {
+            width: 30px; /* Ajusta el ancho del input */
+            text-align: center; /* Centra el texto en el input */
+            font-size: 2rem;
+            border-radius: 1rem;
         }
     </style>
-</head>
-<body>
-
-<div class="sidebar">
-    <img src="img/logologo.svg" alt="Logo principal">
-    <a href="index.php">Inicio</a>
-    <a href="perfil.html">Mi perfil</a>
-    <a href="ajustes.html">Ajustes</a>
-</div>
-
-<div class="content">
-
-    <h1>Conoce los operadores</h1>
-
-    <div class="tarea-contexto">
-           <p class="text-info">Hay diferentes tipos de operadores:
-
-            Suma: Este operador (+) nos ayuda a juntar números. Por ejemplo, si tienes 2 manzanas y luego consigues otras 3, puedes sumarlas para saber cuántas tienes en total.
-        
-            Resta: El operador de resta (-) nos ayuda a quitar cosas de un grupo. Por ejemplo, si tienes 5 lápices y regalas 2, la resta te ayuda a saber cuántos lápices te quedan.
-        
-            Multiplicación: Este operador (*) es como hacer grupos de cosas. Por ejemplo, si tienes 3 filas de 4 libros cada una, la multiplicación te ayuda a saber cuántos libros tienes en total.
-        
-            División: El operador de división (/) nos ayuda a compartir cosas en partes iguales. Por ejemplo, si tienes 12 dulces y los quieres repartir entre 3 amigos, la división te dice cuántos dulces le tocan a cada amigo.
-        
-        Estos operadores son como herramientas mágicas que usamos en matemáticas para resolver problemas y hacer cuentas.</p>
-   </div>
-    <!-- <form action="calificar_examen.php" method="post">
-        <div class="question">
-            <h3>Pregunta 1: Completa la ecuación: 2 + <input type="text" name="q1" maxlength="1"> = 5</h3>
-        </div>
-        
-        <div class="question">
-            <h3>Pregunta 2: Completa la ecuación: 3 * <input type="text" name="q2" maxlength="2"> = 15</h3>
-        </div>
-        
-        <div class="question">
-            <h3>Pregunta 3: Completa la ecuación: <input type="text" name="q3" maxlength="2"> / 4 = 5</h3>
-        </div>
-        
-        <div class="question">
-            <h3>Pregunta 4: Completa la ecuación: 10 - <input type="text" name="q4" maxlength="2"> = 5</h3>
-        </div>
-        
-        <button type="submit">Enviar respuestas</button>
-    </form> -->
-    
-<!-- </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de Navegación Lateral</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-</head>
-<body>
-
-<div class="sidebar">
-    <img src="img/logos.svg" alt="Logo principal">
-    <a href="index.html">Inicio</a>
-    <a href="perfil.html">Mi perfil</a>
-    <a href="ajustes.html">Ajustes</a>
-</div>
-    <button id="chatbot-toggle-btn"><img src="img/bot.svg" alt="buttonpng" /></button>
-    <div class="chatbot-popup" id="chatbot-popup">
-        <div class="chat-header">
-            <span>Chatbot | Aprende sin limites</span>
-            <button id="close-btn">&times;</button>
-        </div>
-        <div class="chat-box" id="chat-box"></div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Escribe un mensaje">
-            <button id="send-btn">Enviar</button>
-        </div>
-        
-    </div>
-</div>
-<script src="script.js"></script>
-</body>
-</html> -->
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de Navegación Lateral</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
 
@@ -146,26 +40,42 @@
            </div>
        </div><!--anuncio-->
     </div>
-
     <form action="calificar_examen.php" method="post">
-        <div class="question">
-            <h3>Pregunta 1: Completa la ecuación: 2 + <input type="text" name="q1" maxlength="1"> = 5</h3>
+        <div class="tarea3">
+            <div class="question">
+                <h3>Hora de practicar</h3>
+                <h4>Pregunta 1: Completa la ecuación: 2 + 
+                    <input type="text" name="q1" class="single-digit-input"> = 5
+                </h4>
+            </div>
+            <div class="boton-tarea">
+                <button class="boton-amarillo-block" type="submit">Calificar</button>
+            </div>
         </div>
-        
+    </form>
+    
+    <div class="tarea tarea2">
+        <div class="contenido-tarea">
+           <h3 class="titulo-curso">Conoce al operador Resta</h3>
+           <p class="text-info">Si tienes 5 caramelos y te comes 2, ¿cuántos caramelos te quedan? Para saberlo, restamos:
+            5 - 2 = 3
+            Así que te quedan 3 caramelos.</p>
+       </div>
+   </div>
+
+   <form action="calificar_examen.php" method="post">
+    <div class="tarea3">
         <div class="question">
-            <h3>Pregunta 2: Completa la ecuación: 3 * <input type="text" name="q2" maxlength="2"> = 15</h3>
+            <h3>Hora de practicar</h3>
+            <h4>Pregunta 4: Completa la ecuación: 10 - 
+                <input type="text" name="q2" class="single-digit-input"> = 5
+            </h4>
         </div>
-        
-        <div class="question">
-            <h3>Pregunta 3: Completa la ecuación: <input type="text" name="q3" maxlength="2"> / 4 = 5</h3>
+        <div class="boton-tarea">
+            <button class="boton-amarillo-block" type="submit">Calificar</button>
         </div>
-        
-        <div class="question">
-            <h3>Pregunta 4: Completa la ecuación: 10 - <input type="text" name="q4" maxlength="2"> = 5</h3>
-        </div>
-        
-        <button type="submit">Enviar respuestas</button>
-    </form> 
+    </div>
+</form>
 
 </div>
 
