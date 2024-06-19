@@ -12,7 +12,54 @@
             font-size: 2rem;
             border-radius: 1rem;
         }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
     </style>
+    <script>
+        let form1Correct = false;
+        let form2Correct = false;
+
+        function checkForms() {
+            if (form1Correct && form2Correct) {
+                document.getElementById("salir").disabled = false;
+            }
+        }
+
+        function validarFormulario1(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            const respuesta1 = document.forms["form1"]["q1"].value;
+            if (respuesta1 != "3") {
+                alert("Respuesta incorrecta en la Pregunta 1. La respuesta correcta es 3.");
+                return false;
+            } else {
+                alert("Respuesta correcta en la Pregunta 1. ¡Bien hecho!");
+                form1Correct = true;
+                checkForms();
+            }
+        }
+
+        function validarFormulario2(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            const respuesta2 = document.forms["form2"]["q2"].value;
+            if (respuesta2 != "8") {
+                alert("Respuesta incorrecta en la Pregunta 2. La respuesta correcta es 8.");
+                return false;
+            } else {
+                alert("Respuesta correcta en la Pregunta 2. ¡Bien hecho!");
+                form2Correct = true;
+                checkForms();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("form1").addEventListener("submit", validarFormulario1);
+            document.getElementById("form2").addEventListener("submit", validarFormulario2);
+        });
+    </script>
 </head>
 <body>
 
@@ -40,7 +87,7 @@
            </div>
        </div><!--anuncio-->
     </div>
-    <form action="calificar_examen.php" method="post">
+    <form id="form1" action="">
         <div class="tarea3">
             <div class="question">
                 <h3>Hora de practicar</h3>
@@ -63,12 +110,12 @@
        </div>
    </div>
 
-   <form action="calificar_examen.php" method="post">
+   <form id="form2" action="">
     <div class="tarea3">
         <div class="question">
             <h3>Hora de practicar</h3>
-            <h4>Pregunta 4: Completa la ecuación: 10 - 
-                <input type="text" name="q2" class="single-digit-input"> = 5
+            <h4>Pregunta 2: Completa la ecuación: 4 + 
+                <input type="text" name="q2" class="single-digit-input"> = 12
             </h4>
         </div>
         <div class="boton-tarea">
@@ -76,7 +123,7 @@
         </div>
     </div>
 </form>
-
+<button id="salir" disabled>Salir</button>
 </div>
 
 </body>
