@@ -9,10 +9,10 @@
 <body>
 <div class="sidebar">
     <img src="img/logos.svg" alt="Logo principal">
-    <a href="index.php">Cerrar sesión</a>
     <a href="cursos.php?id=<?php echo $_GET["id"];?>">Cursos</a>
     <a href="perfil.php?id=<?php echo $_GET["id"];?>">Mi perfil</a>
     <a href="ajustes.html">Ajustes</a>
+    <a href="index.php">Cerrar sesión</a>
 </div>
     <?php
     require "database.php";
