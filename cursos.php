@@ -13,7 +13,7 @@
 <div class="sidebar">
     <img src="img/logos.svg" alt="Logo principal">
     <a href="index.php">Cerrar sesión</a>
-    <a href="cursos.php">Cursos</a>
+    <a href="#">Cursos</a>
     <a href="perfil.php?id=<?php echo $_GET["id"];?>">Mi perfil</a>
     <a href="ajustes.html">Ajustes</a>
 </div>
@@ -29,7 +29,6 @@
         ON inscriptions.course_id = courses.course_id
         WHERE user_id = ".$userid."";
         $pdo = Database::connect();
-        $sqltorn = "SELECT * FROM reto_torneo;";
         foreach ($pdo->query($sql) as $row) {
         echo '
         <div class="anuncio">
@@ -42,8 +41,8 @@
                 <p class="precio">'.$row["instructor"].'</p>
 
 
-                <a href="anuncio.html" class="boton-amarillo-block">
-                    Ver Propiedad
+                <a href="tareas.php?course='.$row["course_id"].'&person='.$_GET["id"].'" class="boton-amarillo-block">
+                    Ver Curso
                 </a>
             </div><!--.contenido-anuncio-->
         </div><!--anuncio-->
