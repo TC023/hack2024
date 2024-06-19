@@ -28,6 +28,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    
 }
 
 h1{
@@ -41,6 +42,10 @@ h3{
 }
 h4{
     font-size:2.6rem
+}
+.text-info{
+    color: white;
+    font-size: 2rem;
 }
 
 .sidebar {
@@ -72,7 +77,9 @@ h4{
     margin-left: 200px;
     padding: 20px;
 }
-
+.content form{
+    width: 100%;
+}
 .boton-amarillo{
     background-color:#e08709;
     color:#fff;
@@ -117,7 +124,45 @@ img,picture{
         display:grid;
         gap:2rem;
         grid-template-columns:repeat(3,1fr)
-    }}
+    }
+    .contenedor-tareas{
+        display:grid;
+        gap:2rem;
+        grid-template-rows:repeat(2,1fr);
+    }
+    .tarea{
+        display:grid;
+        gap:2rem;
+        grid-template-columns:2fr 1fr;
+    }
+    
+}
+
+.tarea2{
+    display:grid;
+    gap:2rem;
+    grid-template-columns:1fr;
+    border-radius: 3rem;
+    
+}
+.tarea{
+    background-color: var(--negro-principal);
+    border:1px solid #c8c8c8;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.boton-tarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton-tarea a{
+    margin: auto 0;
+}
+.contenido-tarea {
+    padding: 0 2rem;
+}
+
     .anuncio{
         background-color: var(--negro-principal);
         border:1px solid #c8c8c8;
@@ -345,3 +390,8 @@ img,picture{
     .button-container button:hover {
         background-color: #0074CC;
     }
+
+
+.tarea-contexto{
+    background-color: var(--negro-principal);
+}
