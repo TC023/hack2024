@@ -19,54 +19,7 @@
 <div class="content">
 
     <h2>Cursos disponibles</h2>
-    <div class="contenedor-anuncios">
-        <div class="anuncio">
-            <picture>
-                <img src="img/matematicas.svg" alt="Logo principal">
-            </picture>
-
-            <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Matemáticas</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
-
-
-                <a href="anuncio.html" class="boton-amarillo-block">
-                    Ver Propiedad
-                </a>
-            </div><!--.contenido-anuncio-->
-        </div><!--anuncio-->
-
-        <div class="anuncio">
-            <picture>
-                <img src="img/ciencias.svg" alt="Logo principal">
-            </picture>
-
-            <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Ciencias</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
-
-
-                <a href="anuncio.html" class="boton-amarillo-block">
-                    Ver Propiedad
-                </a>
-            </div><!--.contenido-anuncio-->
-        </div><!--anuncio-->
-
-        <div class="anuncio">
-            <picture>
-                <img src="img/espanol.svg" alt="Logo principal">
-            </picture>
-            <div class="contenido-anuncio">
-                <h3 class="titulo-curso">Español</h3>
-                <p class="precio">Maestro. Rodrigo Hernández</p>
-
-                <a href="anuncio.html" class="boton--negro">
-                    Ver Propiedad
-                </a>
-            </div><!--.contenido-anuncio-->
-        </div><!--anuncio-->
-
-    </div> <!--.contenedor-anuncios-->
+ 
     <button id="chatbot-toggle-btn"><img src="img/bot.svg" alt="buttonpng" /></button>
     <div class="chatbot-popup" id="chatbot-popup">
         <div class="chat-header">
