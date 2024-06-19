@@ -25,7 +25,12 @@
                 require "database.php";
                 $userid = $_GET["person"];
                 $course = $_GET["course"];
-                $sql = 'SELECT * FROM tareas WHERE course_id = '.$course.'';
+                $sql = 'SELECT * 
+FROM tareas
+INNER JOIN user_tasks
+ON tareas.assignment_id = user_tasks.assignment_id
+where course_id = '.$course.' and user_id = '.$userid.';
+';
                 $pdo = Database::connect();
                 foreach ($pdo->query($sql) as $row) {
                     echo'
@@ -35,9 +40,13 @@
                         <p class="precio">'.$row["descrip"].'</p>
                     </div>
                     <div class="boton-tarea">
-                        <a href="'.$row["preguntasHTML"].'" class="boton-amarillo-block">
-                            Iniciar Tema
-                        </a>
+                        <a href="'.$row["preguntasHTML"].'" class="boton-amarillo-block">';
+                        if ($row["status"] == "Completado") {
+                            echo 'Repasar';
+                        }else {
+                            echo 'Iniciar tema';
+                        }
+                        echo '</a>
                     </div><!--.contenido-anuncio-->
                 </div><!--anuncio-->    
                     ';
